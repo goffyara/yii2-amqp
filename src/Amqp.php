@@ -11,6 +11,7 @@ class Amqp extends Component
     public $port;
     public $user;
     public $password;
+    public $vhost = '/';
 
     private $_channel;
     private $_connection;
@@ -25,7 +26,8 @@ class Amqp extends Component
             $this->host,
             $this->port,
             $this->user,
-            $this->password
+            $this->password,
+            $this->vhost
         );
 
         return $this->_connection;
